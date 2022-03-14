@@ -1,0 +1,234 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+    font-family: 'Fredoka', sans-serif;
+    font-weight:bold;
+    font-family: 'Roboto', sans-serif;
+    text-align: center;
+
+}
+ 
+h1{
+    letter-spacing: 3px;
+    padding-bottom: 1px;
+    font-weight: bolder;
+    margin-top: 50px; 
+    text-align: center;
+    font-family: Arial , Helvetica , sans-serif;
+    animation: apparition 1.2s ease-out  ; // animation apparition en dessous 
+}
+
+@keyframes apparition{
+    from{
+        opacity : 0;
+        transform: translateY(-100px);
+    }
+    to{
+        opacity : 1;
+        transform: translateY(0px);
+    }
+}
+#icon{
+    position:relative;
+    display: flex;
+    justify-content:center;
+    top:9%;
+    
+}
+ 
+  
+
+ #contenu{
+     position:relative;
+     /* display: flex;
+     justify-content:center;
+     align-items:center; */
+    flex-wrap: wrap;
+    
+    
+ }
+ #intro{
+   
+    left:0;
+     
+ }
+ h2 , h3{
+     color:#F8F8F8;
+     top: 60%;
+ }
+ 
+body{
+    display:flex;
+    justify-content :center;
+    align-self: center;
+    min-height:100vh;
+    background: #34495E ;
+}
+.container{
+
+    position:relative;
+    max-width: 100%;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr) );
+    grid-template-rows:  minmax(00px,1fr) ;
+    margin: 15px;
+    grid-auto-flow: dense;
+    gap: 5px;
+   
+
+}
+
+.container .box{
+    background: #41B883;
+    padding:20px;
+    display: grid;
+    font-size: 20px;
+    place-items: center;
+    text-align: center;
+    color: rgb(0, 0, 0);
+    transition:0.5s;
+    border-radius:10px;
+    align-content: center;
+    
+}
+
+.container .box:hover{
+    background:#34495E;
+    color: white;
+    border: 5px  white solid;
+    font-weight: ;
+     
+    
+    
+}
+ 
+
+.container .box img{
+    position:relative;
+    max-width:200px;
+    margin-bottom:10px;
+     
+}
+ 
+
+
+.container .box:nth-child(1){
+    grid-column:span 3;
+    grid-row:span 1;
+}
+
+.container .box:nth-child(2){
+        grid-column:span 1;
+        grid-row:span 2;
+    
+}
+.container .box:nth-child(4){
+        grid-column:span 1;
+        grid-row:span 2;
+    
+}
+.container .box:nth-child(5){
+    grid-column:span 2;
+    grid-row:span 1;
+
+}
+@media and  screen(max-width:991px)
+{   
+     
+   
+    .container{
+        grid-template-columns:repeat(auto-fill, minmax(100% , 1fr));
+        grid-template-rows: minmax(auto , auto);
+       
+    }
+    .container .box{
+        grid-column:unset !important;
+        grid-row:unset !important;
+        justify-items: stretch;
+    }
+   
+}
+@media and  screen(max-width:400px)
+{
+    #image{
+       width: 12000px;
+    }
+}
+
+a{
+    background-color: #008CBA;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 5px;
+    animation: nope .9s forwards;
+
+}
+
+@keyframes nope {
+    0%{
+        transform: translateX(0px);
+         
+    }
+   20%{
+        transform: translateX(-10px);
+         
+    }
+    
+    40%{
+        transform: translateX(10px);
+         
+    }
+    60%{
+        transform: translateX(-10px);
+         
+    }
+    80%{
+        transform: translateX(10px);
+         
+    }
+    100%{
+        transform: translateX(0px);
+         
+    }
+    
+} 
+a:hover{
+     color:#34495E ;
+      
+ }
+ a:visited{
+     color:rgb(195, 197, 41);
+ }
+
+ .material-icons {
+    font-family: 'Material Icons';
+    font-weight: normal;
+    font-style: normal;
+    font-size: 24px;  /* Preferred icon size */
+    display: inline-block;
+    line-height: 1;
+    text-transform: none;
+    letter-spacing: normal;
+    word-wrap: normal;
+    white-space: nowrap;
+    direction: ltr;
+  
+    /* Support for all WebKit browsers. */
+    -webkit-font-smoothing: antialiased;
+    /* Support for Safari and Chrome. */
+    text-rendering: optimizeLegibility;
+  
+    /* Support for Firefox. */
+    -moz-osx-font-smoothing: grayscale;
+  
+    /* Support for IE. */
+    font-feature-settings: 'liga';
+  }
