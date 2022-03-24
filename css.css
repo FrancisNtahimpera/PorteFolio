@@ -130,6 +130,9 @@ body{
     }
    
 }
+#profil{
+    display: block;
+}
 @media (max-width:400px)
 {
     .container .box{
@@ -141,6 +144,9 @@ body{
        
         display: unset;
         
+    }
+    #profil{
+        display: none;
     }
 }
 
